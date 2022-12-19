@@ -1,13 +1,20 @@
 :root {
-  --background-color: #2e2f42;
-  --paragraph-color: #434455;
-  --button-color: #4d5ae5;
-  --link-active: #4d5ae5;
+  --bg-color-dark: #2e2f42;
+  --bg-color-light: #f4f4fd;
+  --text-color: #434455;
+  --second-title-color: #2e2f42;
+  --nav-link-color: #2e2f42;
+  --btn-color: #4d5ae5;
+  --btn-studio-active: #404bbf;
+  --link-color-blue: #4d5ae5;
+  --color-white: #fff;
+  --footer-logo-color: #f4f4fd;
+  --footer-text-color: #e7e9fc;
 }
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #2e2f42;
+  color: var(--second-title-color);
   font-size: 16px;
 }
 
@@ -21,80 +28,75 @@ body {
 
 .btn {
   font-family: inherit;
+  font-size: inherit;
   cursor: pointer;
 }
 
-.header-logo {
-  font-family: "Raleway" sans-serif;
+.logo {
+  font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: inherit;
+  color: var(--nav-link-color);
+  text-decoration: none;
 }
 
 .part-logo {
-  color: #4d5ae5;
+  color: var(--link-color-blue);
 }
 
-.header-link {
+.menu-link {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: inherit;
+  color: var(--nav-link-color);
 }
 
-.header-link:hover,
-.header-link:focus,
-.header-link.active {
-  color: var(--link-active);
+.header .link:hover,
+.header .link:focus,
+.link.active {
+  color: var(--link-color-blue);
 }
 
-.header-mail,
-.header-tel {
+.header .mail-link,
+.tel-link {
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #434455;
-}
-
-.header-mail:hover,
-.header-mail:focus,
-.header-tel:hover,
-.header-tel:focus {
-  color: var(--link-active);
+  color: var(--text-color);
 }
 
 .solutions {
-  background: var(--background-color);
+  background: var(--bg-color-dark);
 }
 
-.solutions-title {
+.solutions .title {
   font-weight: 500;
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
-.solutions-btn {
+.solutions .btn {
   border: none;
   width: 170px;
   height: 51px;
-  background: var(--button-color);
+  background: var(--btn-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-weight: 500;
   line-height: 1.19;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: var(--color-white);
   cursor: pointer;
 }
 
-.solutions-btn:hover,
-.solutions-btn:focus {
-  background: #404bbf;
+.solutions .btn:hover,
+.solutions .btn:focus {
+  background: var(--btn-studio-active);
 }
 
 .visually-hidden {
@@ -110,26 +112,23 @@ body {
   overflow: hidden;
 }
 
-.advantages-item-title,
-.team-item-title,
-.main-item-title {
+.advantages .title,
+.team .list .title,
+.portfolio-list .title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
 
-.advantages-item-text,
-.team-item-text,
-.main-item-text,
-.footer-text {
+.text {
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--paragraph-color);
+  color: var(--text-color);
 }
 
-.projects-title,
-.team-title {
+.projects .title,
+.team .title {
   font-weight: 500;
   font-size: 36px;
   line-height: 1.11;
@@ -139,55 +138,51 @@ body {
 }
 
 .team {
-  background: #f4f4fd;
+  background: var(--bg-color-light);
 }
 
-.team-item-title {
+.team .list .title {
   text-align: center;
 }
 
-.team-item-text {
+.team .text {
   text-align: center;
 }
 
-.team-list-item {
-  background: #ffffff;
+.team .list-item {
+  background: var(--color-white);
   width: 264px;
 }
 
-.main-btn {
-  background: #f4f4fd;
+.filter-btn {
+  background: var(--bg-color-light);
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   font-weight: 500;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.04em;
-  color: var(--button-color);
+  color: var(--btn-color);
 }
 
-.main-btn:hover,
-.main-btn:focus {
-  border: 1px solid var(--button-color);
-  background: var(--button-color);
+.filter-btn:hover,
+.filter-btn:focus {
+  border: 1px solid var(--btn-color);
+  background: var(--btn-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .footer {
-  background: var(--background-color);
+  background: var(--bg-color-dark);
 }
 
-.footer-logo {
-  font-weight: 800;
-  font-size: 18px;
+.footer .logo {
   line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #f4f4fd;
+  color: var(--footer-logo-color);
 }
 
-.footer-text {
-  color: #e7e9fc;
+.footer .text {
+  color: var(--footer-text-color);
 }
